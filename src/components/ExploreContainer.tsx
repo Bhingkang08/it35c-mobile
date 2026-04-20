@@ -1,22 +1,30 @@
+import { IonButton, IonToast } from '@ionic/react';
 import './ExploreContainer.css';
 
-interface ContainerProps { }
+type ContainerProps = object
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
   return (
     <div id="container">
-      <style>{`
-        ion-action-sheet.my-custom-class {
-          --background: #f58840;
-          --backdrop-opacity: 0.6;
-          --button-background-selected: #e97223;
-          --button-color: #000000;
-          --color: #fff;
-          /* role: "destructive" button iOS styling override */
-          --ion-color-danger: #fdfdfd;
-        }
-      `}</style>
+
+      <div className="card">
+        <h2>Welcome </h2>
+        <p>This is your Ionic app interface</p>
+
+        <IonButton id="open-toast" expand="block" shape="round">
+          Open
+        </IonButton>
+      </div>
+
+      <IonToast 
+        trigger="open-toast" 
+        position="top" 
+        message="Hi! im Bhingkang08 Dawn T. Cagay" 
+        duration={500}>
+      </IonToast>
+
     </div>
+    
   );
 };
 

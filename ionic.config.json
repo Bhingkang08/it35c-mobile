@@ -1,5 +1,7 @@
 {
   "name": "it35c-mobile",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react-vite"
 }
